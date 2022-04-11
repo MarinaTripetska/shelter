@@ -1,0 +1,105 @@
+.header {
+  &--main {
+    padding-top: 60px;
+  }
+  &--pets {
+    padding: 30px 0;
+
+    position: fixed;
+    width: 100vw;
+    height: 120px;
+    z-index: 10;
+
+    background-color: $white;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  &__name {
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.09;
+
+    letter-spacing: 0.06em;
+    color: #f1cdb3;
+
+    margin-bottom: 10px;
+    &--pets-page {
+      color: #545454;
+    }
+  }
+
+  &__desc {
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+
+    color: $white;
+
+    &--pets-page {
+      color: #292929;
+    }
+  }
+}
+
+.nav {
+  &__thumb {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 35px;
+    max-width: 443px;
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #cdcdcd;
+    transition: color $duration $t-foo;
+
+    &:hover,
+    &:focus {
+      color: #fafafa;
+    }
+  }
+
+  &__link--pets {
+    color: #545454;
+
+    &:hover,
+    &:focus {
+      color: #292929;
+    }
+  }
+
+  &__link--active {
+    position: relative;
+    color: #fafafa;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      height: 3px;
+      width: 100%;
+      background: #f1cdb3;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__link--pets.nav__link--active {
+    color: #545454;
+    &::after {
+      box-shadow: none;
+    }
+  }
+}

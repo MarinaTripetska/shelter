@@ -16,20 +16,29 @@
     <title>Shelter</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header header--main">
       <div class="container header__container">
         <div class="logo">
-          <a href="/" target="_blank"><h1 class="logo__name">Cozy House</h1></a>
+          <a href="../main/index.html" target="_blank"
+            ><h1 class="logo__name">Cozy House</h1></a
+          >
           <p class="logo__desc">Shelter for pets in Boston</p>
         </div>
+
         <nav>
-          <ul class="nav-thumb">
+          <ul class="nav__thumb">
             <li class="nav__active">
-              <a href="../pets/index.html">About the shelter</a>
+              <a href="#" class="nav__link nav__link--active"
+                >About the shelter</a
+              >
             </li>
-            <li><a href="">Our pets</a></li>
-            <li><a href="">Help the shelter</a></li>
-            <li><a href="">Contacts</a></li>
+            <li>
+              <a href="../pets/index.html" class="nav__link">Our pets</a>
+            </li>
+            <li>
+              <a href="#help-section" class="nav__link">Help the shelter</a>
+            </li>
+            <li><a href="#contacts-section" class="nav__link">Contacts</a></li>
           </ul>
         </nav>
       </div>
@@ -52,7 +61,7 @@
               extremely wide and open heart. He or she will love you more than
               anybody else in the world, you will see!
             </p>
-            <button type="button" class="btn-primary">Make a friend</button>
+            <a class="btn-primary" href="#friend-section"> Make a friend </a>
           </div>
 
           <img src="../../assets/images/pets/start-screen-puppy.png" alt="" />
@@ -90,7 +99,7 @@
       </section>
 
       <!-- Our Friends -->
-      <section class="section friends">
+      <section class="section friends" id="friend-section">
         <div class="container">
           <h2 class="friends__title">
             Our friends who <br />
@@ -138,7 +147,7 @@
       </section>
 
       <!-- Help -->
-      <section class="section help">
+      <section class="section help" id="help-section">
         <div class="container">
           <h2 class="help__title">
             How you can help <br />
@@ -236,7 +245,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts-section">
       <div class="container footer__container">
         <div class="footer__item footer__item--first">
           <h3 class="footer__title">For questions and suggestions</h3>

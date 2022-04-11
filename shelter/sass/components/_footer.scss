@@ -1,0 +1,69 @@
+// footer
+.footer {
+  padding-top: 56px;
+  background: url(noise_lines_transparent@2X.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 160px;
+  }
+
+  &__item {
+    width: 100%;
+    height: 234px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &--first {
+      max-width: 280px;
+    }
+
+    &--second {
+      max-width: 302px;
+    }
+  }
+
+  &__title {
+    @extend %title;
+    color: $white;
+
+    letter-spacing: 0.06em;
+  }
+
+  &__address {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.15;
+
+    letter-spacing: 0.06em;
+    color: #f1cdb3;
+  }
+
+  &__icon1 {
+    width: 100%;
+    width: 42px;
+    height: 32px;
+  }
+
+  &__icon2 {
+    width: 100%;
+    max-width: 22px;
+    height: 32px;
+  }
+
+  &__img {
+    position: relative;
+  }
+}

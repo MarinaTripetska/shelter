@@ -8,10 +8,11 @@
 }
 .btn-primary {
   @extend %btn;
+
   padding: 15px;
 
   border-radius: 100px;
-  background: #f1cdb3;
+  background-color: $pramary-btn-color;
 
   width: 207px;
   height: 52px;
@@ -25,21 +26,47 @@
   letter-spacing: 0.06em;
 
   color: #292929;
+
+  transition: background-color $duration $t-foo;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-btn-color;
+  }
 }
 
 .btn__slider {
   @extend %btn;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 52px;
   height: 52px;
-  border: 2px solid #f1cdb3;
+  border: 2px solid $pramary-btn-color;
   border-radius: 50%;
+
+  transition: background-color $duration $t-foo;
 
   svg {
     width: 14px;
     height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $hover-btn-color;
+  }
+
+  &:disabled {
+    border-color: #cdcdcd;
+    color: #cdcdcd;
+
+    &:hover,
+    &:focus {
+      cursor: not-allowed;
+      background-color: $white;
+    }
   }
 }

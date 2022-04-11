@@ -95,7 +95,7 @@ select {
   margin: 0 auto;
 }
 
-.banner__title, .about__title, .friends__title, .help__title, .addition__title, .footer__title {
+.banner__title, .about__title, .friends__title, .help__title, .addition__title, .friends-pets__title, .footer__title {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -103,7 +103,7 @@ select {
   line-height: 1.3;
 }
 
-.btn-primary, .btn__slider, .card__btn {
+.btn-primary, .btn__slider, .card__btn, .friends-pets__card__btn {
   display: block;
   background-color: transparent;
   border: none;
@@ -115,7 +115,7 @@ select {
 .btn-primary {
   padding: 15px;
   border-radius: 100px;
-  background: #f1cdb3;
+  background-color: #f1cdb3;
   width: 207px;
   height: 52px;
   font-family: "Georgia";
@@ -125,6 +125,12 @@ select {
   line-height: 1.3;
   letter-spacing: 0.06em;
   color: #292929;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #fddcc4;
 }
 
 .btn__slider {
@@ -141,6 +147,8 @@ select {
   height: 52px;
   border: 2px solid #f1cdb3;
   border-radius: 50%;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 .btn__slider svg {
@@ -148,9 +156,31 @@ select {
   height: 30px;
 }
 
-.header,
-.banner {
+.btn__slider:hover, .btn__slider:focus {
+  background-color: #fddcc4;
+}
+
+.btn__slider:disabled {
+  border-color: #cdcdcd;
+  color: #cdcdcd;
+}
+
+.btn__slider:disabled:hover, .btn__slider:disabled:focus {
+  cursor: not-allowed;
+  background-color: #fff;
+}
+
+.header--main {
   padding-top: 60px;
+}
+
+.header--pets {
+  padding: 30px 0;
+  position: fixed;
+  width: 100vw;
+  height: 120px;
+  z-index: 10;
+  background-color: #fff;
 }
 
 .header__container {
@@ -175,6 +205,10 @@ select {
   margin-bottom: 10px;
 }
 
+.logo__name--pets-page {
+  color: #545454;
+}
+
 .logo__desc {
   font-size: 13px;
   line-height: 1.5;
@@ -182,7 +216,11 @@ select {
   color: #fff;
 }
 
-.nav-thumb {
+.logo__desc--pets-page {
+  color: #292929;
+}
+
+.nav__thumb {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -193,17 +231,34 @@ select {
       flex-wrap: nowrap;
   gap: 35px;
   max-width: 443px;
+}
+
+.nav__link {
   font-size: 15px;
   line-height: 1.6;
   color: #cdcdcd;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
-.nav__active {
+.nav__link:hover, .nav__link:focus {
+  color: #fafafa;
+}
+
+.nav__link--pets {
+  color: #545454;
+}
+
+.nav__link--pets:hover, .nav__link--pets:focus {
+  color: #292929;
+}
+
+.nav__link--active {
   position: relative;
   color: #fafafa;
 }
 
-.nav__active::after {
+.nav__link--active::after {
   display: block;
   content: "";
   position: absolute;
@@ -214,6 +269,19 @@ select {
   background: #f1cdb3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav__link--pets.nav__link--active {
+  color: #545454;
+}
+
+.nav__link--pets.nav__link--active::after {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.banner {
+  padding-top: 60px;
 }
 
 .banner__bg {
@@ -357,12 +425,27 @@ select {
   gap: 30px;
   max-width: 270px;
   min-height: 435px;
-  background: #fafafa;
+  background-color: #fafafa;
   border-radius: 9px;
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.06em;
+  -webkit-transition: background-color 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+}
+
+.card:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  cursor: pointer;
+}
+
+.card:hover .card__btn {
+  background-color: #fddcc4;
 }
 
 .card__title {
@@ -381,6 +464,8 @@ select {
   color: #292929;
   width: 187px;
   height: 52px;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 .help__title {
@@ -514,6 +599,103 @@ select {
   font-size: 12px;
   line-height: 1.5;
   color: #b2b2b2;
+}
+
+.friends-pets {
+  background-color: #f6f6f6;
+  padding-top: 200px;
+}
+
+.friends-pets__title {
+  letter-spacing: 0.06em;
+  color: #545454;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.friends-pets__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 30px;
+  margin-bottom: 60px;
+}
+
+.friends-pets__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: top;
+      -ms-flex-pack: top;
+          justify-content: top;
+  gap: 30px;
+  max-width: 270px;
+  min-height: 435px;
+  background-color: #fafafa;
+  border-radius: 9px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  -webkit-transition: background-color 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+}
+
+.friends-pets__card:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  cursor: pointer;
+}
+
+.friends-pets__card:hover .card__btn {
+  background-color: #fddcc4;
+}
+
+.friends-pets__card__title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  color: #545454;
+}
+
+.friends-pets__card__btn {
+  padding: 15px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  font-size: 17px;
+  line-height: 1.3;
+  color: #292929;
+  width: 187px;
+  height: 52px;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+.pagination-thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
 }
 
 .footer {
