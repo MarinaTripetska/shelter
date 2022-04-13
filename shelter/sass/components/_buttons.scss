@@ -47,7 +47,7 @@
   border: 2px solid $pramary-btn-color;
   border-radius: 50%;
 
-  transition: background-color $duration $t-foo;
+  transition: background-color $duration $t-foo, border $duration $t-foo;
 
   svg {
     width: 14px;
@@ -57,6 +57,7 @@
   &:hover,
   &:focus {
     background-color: $hover-btn-color;
+    border: 2px solid $hover-btn-color;
   }
 
   &:disabled {
