@@ -668,6 +668,7 @@ select {
 
 .friends-pets__card:hover .card__btn {
   background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .friends-pets__card__title {
@@ -686,8 +687,8 @@ select {
   color: #292929;
   width: 187px;
   height: 52px;
-  -webkit-transition: background-color 300ms ease-in-out;
-  transition: background-color 300ms ease-in-out;
+  -webkit-transition: background-color 300ms ease-in-out, border 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, border 300ms ease-in-out;
 }
 
 .pagination-thumb {
