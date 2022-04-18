@@ -16,31 +16,64 @@
     <title>Shelter</title>
   </head>
   <body>
-    <header class="header header--main">
+    <header class="header header--main" id="header">
       <div class="container header__container">
         <div class="logo">
-          <a href="../main/index.html" target="_blank"
-            ><h1 class="logo__name">Cozy House</h1></a
-          >
+          <a href="./"><h1 class="logo__name">Cozy House</h1></a>
           <p class="logo__desc">Shelter for pets in Boston</p>
         </div>
+        <button
+          class="burger"
+          id="burger"
+          type="button"
+          aria-label="burger menu"
+        >
+          <svg class="burger__icon">
+            <use
+              class="burger__icon-line"
+              href="../../assets/icons/symbol-defs.svg#line"
+            ></use>
+          </svg>
+          <svg class="burger__icon">
+            <use
+              class="burger__icon-line"
+              href="../../assets/icons/symbol-defs.svg#line"
+            ></use>
+          </svg>
+          <svg class="burger__icon">
+            <use
+              class="burger__icon-line"
+              href="../../assets/icons/symbol-defs.svg#line"
+            ></use>
+          </svg>
+        </button>
 
-        <nav>
-          <ul class="nav__thumb">
-            <li class="nav__active">
-              <a href="#" class="nav__link nav__link--active"
-                >About the shelter</a
-              >
-            </li>
-            <li>
-              <a href="../pets/index.html" class="nav__link">Our pets</a>
-            </li>
-            <li>
-              <a href="#help-section" class="nav__link">Help the shelter</a>
-            </li>
-            <li><a href="#contacts-section" class="nav__link">Contacts</a></li>
-          </ul>
-        </nav>
+        <div class="mobile-menu">
+          <div class="mobile-menu__top">
+            <div class="logo menu-open">
+              <a href="./"><h1 class="logo__name">Cozy House</h1></a>
+              <p class="logo__desc">Shelter for pets in Boston</p>
+            </div>
+          </div>
+          <nav class="nav" id="navigation">
+            <ul class="nav__thumb">
+              <li>
+                <a href="#" class="nav__link nav__link--active"
+                  >About the shelter</a
+                >
+              </li>
+              <li>
+                <a href="../pets/index.html" class="nav__link">Our pets</a>
+              </li>
+              <li>
+                <a href="#help-section" class="nav__link">Help the shelter</a>
+              </li>
+              <li>
+                <a href="#contacts-section" class="nav__link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -48,10 +81,10 @@
       <!-- Not only block -->
 
       <section class="banner">
-        <div class="banner__bg"></div>
+        <!-- <div class="banner__bg"></div> -->
 
         <div class="container banner__container">
-          <div class="banner__left">
+          <div class="banner__text-part">
             <h2 class="banner__title">
               Not only people <br />
               need a house
@@ -61,10 +94,16 @@
               extremely wide and open heart. He or she will love you more than
               anybody else in the world, you will see!
             </p>
-            <a class="btn-primary" href="#friend-section"> Make a friend </a>
+            <a class="btn-primary banner__btn" href="#friend-section">
+              Make a friend
+            </a>
           </div>
 
-          <img src="../../assets/images/pets/start-screen-puppy.png" alt="" />
+          <img
+            class="banner__img-part"
+            src="../../assets/images/pets/start-screen-puppy.png"
+            alt="sweet puppy"
+          />
         </div>
       </section>
 
@@ -72,9 +111,12 @@
 
       <section class="section about">
         <div class="container about__container">
-          <img src="../../assets/images/pets/about-pets.png" alt="" />
+          <img
+            src="../../assets/images/pets/about-pets.png"
+            alt="pappy and cat"
+          />
 
-          <div class="about__right">
+          <div class="about__text-part">
             <h2 class="about__title">
               About the shelter <br />
               “Cozy House”
@@ -140,6 +182,7 @@
               </svg>
             </button>
           </div>
+
           <a href="../pets/index.html" class="btn-primary friends__btn-more"
             >Get to know the rest</a
           >
@@ -153,6 +196,7 @@
             How you can help <br />
             our shelter
           </h2>
+
           <ul class="help__list">
             <li class="help__item">
               <svg class="help__icon">
@@ -217,7 +261,7 @@
         <div class="container addition__container">
           <img src="../../assets/images/pets/donation-dog.png" alt="" />
 
-          <div class="addition__right">
+          <div class="addition__text-part">
             <h2 class="addition__title">
               You can also <br />
               make a donation
@@ -251,17 +295,19 @@
           <h3 class="footer__title">For questions and suggestions</h3>
           <!-- <address> -->
           <a class="footer__address" href="mailto:email@shelter.com">
-            <svg class="footer__icon1">
+            <!-- <svg class="footer__icon1">
               <use href="../../assets/icons/symbol-defs.svg#icon-mail"></use>
-            </svg>
-            email@shelter.com</a
-          >
+            </svg> -->
+            <img src="../../assets/icons/mail.svg" alt="" />
+            <span>email@shelter.com</span>
+          </a>
           <a class="footer__address" href="tel:+136745677554">
-            <svg class="footer__icon1">
+            <!-- <svg class="footer__icon1">
               <use href="../../assets/icons/symbol-defs.svg#icon-phone"></use>
-            </svg>
-            +13 674 567 75 54</a
-          >
+            </svg> -->
+            <img src="../../assets/icons/phone.svg" alt="" />
+            <span>+13 674 567 75 54</span>
+          </a>
           <!-- </address> -->
         </div>
 
@@ -274,9 +320,10 @@
             rel="noopener noreferrer"
             class="footer__address"
           >
-            <svg class="footer__icon2">
+            <!-- <svg class="footer__icon2">
               <use href="../../assets/icons/symbol-defs.svg#icon-pin"></use>
-            </svg>
+            </svg> -->
+            <img src="../../assets/icons/pin.svg" alt="" />
             <p>1 Central Street, Boston (entrance from the store)</p>
           </a>
           <a
@@ -285,9 +332,10 @@
             rel="noopener noreferrer"
             class="footer__address"
           >
-            <svg class="footer__icon2">
+            <!-- <svg class="footer__icon2">
               <use href="../../assets/icons/symbol-defs.svg#icon-pin"></use>
-            </svg>
+            </svg> -->
+            <img src="../../assets/icons/pin.svg" alt="" />
             <p>18 South Park, London</p>
           </a>
           <!-- </address> -->
@@ -300,5 +348,7 @@
         />
       </div>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

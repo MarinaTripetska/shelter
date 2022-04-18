@@ -49,11 +49,6 @@
 
   transition: background-color $duration $t-foo, border $duration $t-foo;
 
-  svg {
-    width: 14px;
-    height: 30px;
-  }
-
   &:hover,
   &:focus {
     background-color: $hover-btn-color;
@@ -68,6 +63,21 @@
     &:focus {
       cursor: not-allowed;
       background-color: $white;
+    }
+  }
+
+  svg {
+    width: 14px;
+    height: 30px;
+  }
+
+  &.btn__slider--page-nr {
+    background-color: $pramary-btn-color;
+    cursor: auto;
+    &:hover,
+    &:focus {
+      background-color: $pramary-btn-color;
+      border: $pramary-btn-color;
     }
   }
 }

@@ -1,35 +1,56 @@
 .banner {
-  padding-top: 60px;
-}
-// =====================================
-.banner {
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
+  padding-top: 185px;
+  background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%)
+    #211f20;
+  background-repeat: no-repeat;
+  background-position: top;
+  // &__bg {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: -10;
 
-    width: 100%;
-    height: 912px;
+  //   width: 100%;
+  //   height: 912px;
 
-    background: url(noise_lines_transparent@2X.png),
-      radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%) #211f20;
-    background-repeat: no-repeat;
-    background-position: top;
-  }
+  //   background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%)
+  //     #211f20;
+  //   background-repeat: no-repeat;
+  //   background-position: top;
+
+  //   @media screen and (max-width: 1279px) {
+  //     height: 1169px;
+  //   }
+  //   @media screen and (max-width: 767px) {
+  //     height: 823px;
+  //   }
+  // }
 
   &__container {
     display: flex;
     justify-content: space-between;
     gap: 42px;
+
+    @media screen and (max-width: 1279px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 100px;
+    }
+    @media screen and (max-width: 1279px) {
+      gap: 105px;
+    }
   }
 
-  &__left {
+  &__text-part {
     padding-top: 163px;
     display: flex;
     flex-direction: column;
     gap: 42px;
-    min-width: 460px;
+    max-width: 460px;
+
+    @media screen and (max-width: 1279px) {
+      padding-top: 0;
+    }
   }
 
   &__title {
@@ -37,6 +58,10 @@
 
     font-size: 44px;
     color: $white;
+
+    @media screen and (max-width: 450px) {
+      font-size: 25px;
+    }
   }
 
   &__descr {
@@ -44,6 +69,25 @@
     line-height: 1.6;
 
     color: #cdcdcd;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    align-self: center;
+  }
+
+  &__img-part {
+    @media screen and (max-width: 1279px) {
+      max-width: 569px;
+      align-self: flex-end;
+    }
+
+    @media screen and (max-width: 767px) {
+      max-width: 260px;
+    }
   }
 }
 
@@ -54,9 +98,15 @@
     display: flex;
     justify-content: center;
     gap: 120px;
+
+    @media screen and (max-width: 1279px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 80px;
+    }
   }
 
-  &__right {
+  &__text-part {
     max-width: 430px;
 
     display: flex;
@@ -98,12 +148,24 @@
     align-items: center;
     flex-wrap: nowrap;
     gap: 53px;
+
+    @media screen and (max-width: 1279px) {
+      gap: 12px;
+    }
   }
 
   &__slider-list {
     display: flex;
     justify-content: space-between;
     gap: 90px;
+
+    max-width: 991px;
+    overflow-x: hidden;
+
+    @media screen and (max-width: 1279px) {
+      max-width: 580px;
+      gap: 40px;
+    }
   }
 
   &__btn-more {
@@ -119,9 +181,9 @@
   align-items: center;
   justify-content: top;
   gap: 30px;
-
+  flex: 1 0 100%;
   max-width: 270px;
-  min-height: 435px;
+  height: 435px;
 
   background-color: #fafafa;
   border-radius: 9px;
@@ -192,6 +254,12 @@
 
     row-gap: 55px;
     column-gap: 120px;
+
+    @media screen and (max-width: 1279px) {
+      min-width: 630px;
+      row-gap: 55px;
+      column-gap: 60px;
+    }
   }
 
   &__item {
@@ -209,6 +277,10 @@
     letter-spacing: 0.06em;
 
     color: $title-grey;
+
+    @media screen and (max-width: 1279px) {
+      flex: 0 0 170px;
+    }
   }
 
   &__icon {
@@ -226,9 +298,14 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+
+    @media screen and (max-width: 1279px) {
+      flex-direction: column-reverse;
+      gap: 60px;
+    }
   }
 
-  &__right {
+  &__text-part {
     max-width: 380px;
 
     display: flex;
@@ -257,6 +334,14 @@
   }
 
   &__bank-nr {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+    color: $title-grey;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -268,19 +353,16 @@
 
     background: #f1cdb3;
     border-radius: 9px;
-
-    font-family: "Georgia";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.15;
-
-    letter-spacing: 0.06em;
-    color: $title-grey;
+    transition: background-color $duration $t-foo;
 
     svg {
       width: 30px;
       height: 23px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $hover-btn-color;
     }
   }
 

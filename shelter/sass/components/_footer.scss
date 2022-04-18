@@ -1,14 +1,28 @@
 // footer
 .footer {
   padding-top: 56px;
-  background: url(noise_lines_transparent@2X.png),
-    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+  background: radial-gradient(
+      110.67% 538.64% at 5.73% 50%,
+      #513d2f 0%,
+      #1a1a1c 100%
+    ),
     #211f20;
+
+  @media screen and (max-width: 1279px) {
+    padding-top: 30px;
+  }
 
   &__container {
     display: flex;
     justify-content: space-between;
     gap: 160px;
+
+    @media screen and (max-width: 1279px) {
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 60px;
+      row-gap: 65px;
+    }
   }
 
   &__item {
@@ -52,14 +66,13 @@
   }
 
   &__icon1 {
-    width: 100%;
+    flex: 0 0 100%;
     width: 42px;
     height: 32px;
   }
 
   &__icon2 {
-    width: 100%;
-    max-width: 22px;
+    width: 22px;
     height: 32px;
   }
 

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -20,13 +24,9 @@ li {
 }
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
-
-
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
-
 }
 
 a {
@@ -43,7 +43,7 @@ input,
 button,
 textarea,
 select {
-font: inherit;
+  font: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {
