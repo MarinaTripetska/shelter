@@ -104,8 +104,15 @@
       align-items: center;
       gap: 80px;
     }
+    @media screen and (max-width: 767px) {
+      gap: 42px;
+    }
   }
-
+  &__image {
+    @media screen and (max-width: 450px) {
+      max-width: 260px;
+    }
+  }
   &__text-part {
     max-width: 430px;
 
@@ -113,6 +120,11 @@
     flex-direction: column;
     justify-content: center;
     gap: 25px;
+
+    @media screen and (max-width: 767px) {
+      text-align: justify;
+      gap: 22px;
+    }
   }
 
   &__title {
@@ -141,30 +153,61 @@
     color: $title-grey;
     text-align: center;
     margin-bottom: 60px;
+
+    @media screen and (max-width: 450px) {
+      margin-bottom: 42px;
+    }
   }
   &__slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex-wrap: nowrap;
+    // gap: 53px;
+
+    @media screen and (max-width: 450px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 53px;
 
+    transform: translateY(-50%);
     @media screen and (max-width: 1279px) {
-      gap: 12px;
+    }
+    @media screen and (max-width: 450px) {
+      position: static;
+      justify-content: center;
+      gap: 80px;
+
+      transform: translateY(0%);
     }
   }
 
   &__slider-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 90px;
 
     max-width: 991px;
     overflow-x: hidden;
 
     @media screen and (max-width: 1279px) {
+      justify-content: space-between;
       max-width: 580px;
       gap: 40px;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 270px;
+      gap: 10px;
     }
   }
 
@@ -172,6 +215,10 @@
     width: 261px;
     margin: 0 auto;
     margin-top: 60px;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 42px;
+    }
   }
 }
 
@@ -244,21 +291,36 @@
     color: $title-grey;
     text-align: center;
     margin-bottom: 60px;
+
+    @media screen and (max-width: 450px) {
+      margin-bottom: 42px;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    min-width: 1026px;
+    width: 100%;
+    // min-width: 1026px;
 
     row-gap: 55px;
     column-gap: 120px;
 
     @media screen and (max-width: 1279px) {
-      min-width: 630px;
+      // max-width: 630px;
       row-gap: 55px;
       column-gap: 60px;
+    }
+    @media screen and (max-width: 767px) {
+      // max-width: 630px;
+      // justify-content: flex-start;
+      // align-items: center;
+      gap: 30px;
+      // margin: 0 auto;
+    }
+    @media screen and (max-width: 320px) {
+      justify-content: flex-start;
     }
   }
 
@@ -281,15 +343,27 @@
     @media screen and (max-width: 1279px) {
       flex: 0 0 170px;
     }
+
+    @media screen and (max-width: 767px) {
+      flex: 0 0 130px;
+      font-size: 15px;
+      line-height: 1.13;
+    }
   }
 
   &__icon {
     width: 60px;
     height: 60px;
+
+    @media screen and (max-width: 767px) {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
 // iddition
+
 .addition {
   background: #f6f6f6;
 
@@ -303,6 +377,9 @@
       flex-direction: column-reverse;
       gap: 60px;
     }
+    @media screen and (max-width: 767px) {
+      gap: 42px;
+    }
   }
 
   &__text-part {
@@ -312,6 +389,10 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+
+    @media screen and (max-width: 767px) {
+      align-items: center;
+    }
   }
 
   &__title {
@@ -331,6 +412,10 @@
     letter-spacing: 0.06em;
 
     color: $title-grey;
+
+    @media screen and (max-width: 767px) {
+      letter-spacing: 0.03em;
+    }
   }
 
   &__bank-nr {
@@ -364,6 +449,14 @@
     &:focus {
       background-color: $hover-btn-color;
     }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      max-width: 281px;
+      min-height: 43px;
+
+      font-size: 15px;
+    }
   }
 
   &__descr {
@@ -373,5 +466,9 @@
     line-height: 1.5;
 
     color: #b2b2b2;
+
+    @media screen and (max-width: 767px) {
+      text-align: justify;
+    }
   }
 }

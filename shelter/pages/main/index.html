@@ -114,6 +114,7 @@
           <img
             src="../../assets/images/pets/about-pets.png"
             alt="pappy and cat"
+            class="about__image"
           />
 
           <div class="about__text-part">
@@ -148,14 +149,6 @@
             are looking for a house
           </h2>
           <div class="friends__slider">
-            <button type="button" class="btn__slider">
-              <svg>
-                <use
-                  href="../../assets/icons/symbol-defs.svg#icon-arr-left"
-                ></use>
-              </svg>
-            </button>
-
             <ul class="friends__slider-list">
               <li class="card">
                 <img src="../../assets//images/pets/katrine.png" alt="" />
@@ -174,13 +167,23 @@
               </li>
             </ul>
 
-            <button type="button" class="btn__slider">
-              <svg>
-                <use
-                  href="../../assets/icons/symbol-defs.svg#icon-arr-right"
-                ></use>
-              </svg>
-            </button>
+            <div class="controls">
+              <button type="button" class="btn__slider">
+                <svg>
+                  <use
+                    href="../../assets/icons/symbol-defs.svg#icon-arr-left"
+                  ></use>
+                </svg>
+              </button>
+
+              <button type="button" class="btn__slider">
+                <svg>
+                  <use
+                    href="../../assets/icons/symbol-defs.svg#icon-arr-right"
+                  ></use>
+                </svg>
+              </button>
+            </div>
           </div>
 
           <a href="../pets/index.html" class="btn-primary friends__btn-more"
