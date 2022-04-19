@@ -33,6 +33,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     &.menu-open {
       justify-content: flex-end;
     }
@@ -40,6 +41,10 @@
 }
 
 .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__name {
     font-family: "Georgia";
     font-weight: 400;
@@ -52,6 +57,9 @@
 
     &--pets-page {
       color: #545454;
+      @media screen and (max-width: 1279px) {
+        margin-bottom: 6px;
+      }
     }
   }
 
@@ -147,15 +155,9 @@
 .nav {
   @media screen and (max-width: 767px) {
     display: none;
-    // position: absolute;
-    // top: 60px;
-    // right: -150px;
-    // padding: 30px;
-    // height: 300px;
 
     &.open {
       display: block;
-      // right: 0;
     }
   }
 
@@ -187,14 +189,13 @@
 
     @media screen and (max-width: 767px) {
       font-size: 32px;
-      line-height: 1.6;
       color: #fafafa;
     }
   }
 
   &__link--pets {
     color: #545454;
-
+    line-height: 1.3;
     &:hover,
     &:focus {
       color: #292929;
@@ -210,7 +211,7 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -3px;
+      bottom: -6px;
       height: 3px;
       width: 100%;
       background: #f1cdb3;
@@ -225,24 +226,3 @@
     }
   }
 }
-
-// @media screen and (max-width: 767px) {
-//   .nav {
-//     display: none;
-//     position: absolute;
-//     top: 60px;
-//     right: -150px;
-//     padding: 30px;
-//     height: 300px;
-
-//     .nav__thumb {
-//       display: flex;
-//       flex-direction: column;
-//       gap: 30px;
-//     }
-//     &.open {
-//       display: block;
-//       right: 0;
-//     }
-//   }
-// }
