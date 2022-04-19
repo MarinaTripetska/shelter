@@ -344,6 +344,9 @@ select {
             align-items: center;
     margin-bottom: 158px;
   }
+  .mobile-menu.menu-open.mobile-menu--pets-page {
+    background: #fff;
+  }
 }
 
 .burger {
@@ -382,6 +385,11 @@ select {
 .burger__icon {
   width: 30px;
   height: 2px;
+  stroke: #f1cdb3;
+}
+
+.burger__icon--pets-page {
+  stroke: black;
 }
 
 @media screen and (max-width: 767px) {
@@ -500,10 +508,7 @@ select {
       -ms-flex-pack: top;
           justify-content: top;
   gap: 30px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-  max-width: 270px;
+  width: 270px;
   height: 435px;
   background-color: #fafafa;
   border-radius: 9px;
@@ -867,6 +872,7 @@ select {
 }
 
 .help__list {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -875,7 +881,6 @@ select {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
   row-gap: 55px;
   -webkit-column-gap: 120px;
           column-gap: 120px;
@@ -1111,6 +1116,15 @@ select {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .friends-pets {
+    padding-top: 162px;
+  }
+  .friends-pets.section {
+    padding-bottom: 42px;
+  }
+}
+
 .friends-pets__title {
   letter-spacing: 0.06em;
   color: #545454;
@@ -1121,6 +1135,12 @@ select {
 @media screen and (max-width: 1279px) {
   .friends-pets__title {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .friends-pets__title {
+    margin-bottom: 42px;
   }
 }
 
@@ -1169,6 +1189,12 @@ select {
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.06em;
+}
+
+@media screen and (max-width: 767px) {
+  .pagination-thumb {
+    gap: 10px;
+  }
 }
 
 .footer {

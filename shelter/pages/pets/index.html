@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <header class="header header--pets">
+    <header class="header header--pets" id="header">
       <div class="container header__container">
         <div class="logo">
           <a href="../main/"
@@ -29,34 +29,76 @@
           </p>
         </div>
 
-        <nav class="nav">
-          <ul class="nav__thumb">
-            <li>
-              <a href="../main/index.html" class="nav__link nav__link--pets"
-                >About the shelter</a
+        <button
+          class="burger"
+          id="burger"
+          type="button"
+          aria-label="burger menu"
+        >
+          <svg class="burger__icon burger__icon--pets-page">
+            <use
+              class="burger__icon-line"
+              href="../../assets/icons/symbol-defs.svg#line"
+            ></use>
+          </svg>
+          <svg class="burger__icon burger__icon--pets-page">
+            <use
+              class="burger__icon-line"
+              href="../../assets/icons/symbol-defs.svg#line"
+            ></use>
+          </svg>
+          <svg class="burger__icon burger__icon--pets-page">
+            <use
+              class="burger__icon-line"
+              href="../../assets/icons/symbol-defs.svg#line"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu mobile-menu--pets-page">
+          <div class="mobile-menu__top">
+            <div class="logo menu-open">
+              <a href="../main/"
+                ><h1 class="logo__name logo__name--pets-page">Cozy House</h1></a
               >
-            </li>
-            <li>
-              <a
-                href="../pets/index.html"
-                class="nav__link nav__link--pets nav__link--active"
-                >Our pets</a
-              >
-            </li>
-            <li>
-              <a
-                href="../main/index.html#help-section"
-                class="nav__link nav__link--pets"
-                >Help the shelter</a
-              >
-            </li>
-            <li>
-              <a href="#contacts-section" class="nav__link nav__link--pets"
-                >Contacts</a
-              >
-            </li>
-          </ul>
-        </nav>
+              <p class="logo__desc logo__desc--pets-page">
+                Shelter for pets in Boston
+              </p>
+            </div>
+          </div>
+
+          <nav class="nav" id="navigation">
+            <ul class="nav__thumb">
+              <li>
+                <a href="../main/index.html" class="nav__link nav__link--pets"
+                  >About the shelter</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="../pets/index.html"
+                  class="nav__link nav__link--pets nav__link--active"
+                  >Our pets</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="../main/index.html#help-section"
+                  class="nav__link nav__link--pets"
+                  >Help the shelter</a
+                >
+              </li>
+
+              <li>
+                <a href="#contacts-section" class="nav__link nav__link--pets"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 

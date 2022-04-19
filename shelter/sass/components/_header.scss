@@ -51,12 +51,12 @@
     font-size: 32px;
     line-height: 1.09;
     letter-spacing: 0.06em;
-    color: #f1cdb3;
+    color: $pramary-btn-color;
 
     margin-bottom: 10px;
 
     &--pets-page {
-      color: #545454;
+      color: $title-grey;
       @media screen and (max-width: 1279px) {
         margin-bottom: 6px;
       }
@@ -71,7 +71,7 @@
     color: $white;
 
     &--pets-page {
-      color: #292929;
+      color: $dark;
     }
   }
   &.menu-open {
@@ -98,7 +98,7 @@
       padding: 30px 10px;
 
       position: absolute;
-      background: #292929;
+      background: $dark;
       transition: right 1000ms $t-foo, background 1000ms $t-foo,
         width 1000ms $t-foo, height 1000ms $t-foo;
 
@@ -111,9 +111,12 @@
         margin-bottom: 158px;
       }
     }
+
+    &.menu-open.mobile-menu--pets-page {
+      background: $white;
+    }
   }
 }
-
 .burger {
   display: none;
 
@@ -128,7 +131,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  // gap: 6px;
 
   border: none;
   padding: 0;
@@ -145,6 +147,11 @@
   &__icon {
     width: 30px;
     height: 2px;
+    stroke: $pramary-btn-color;
+
+    &--pets-page {
+      stroke: black;
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -179,32 +186,33 @@
   &__link {
     font-size: 15px;
     line-height: 1.6;
-    color: #cdcdcd;
+    color: $white-grey;
     transition: color $duration $t-foo;
 
     &:hover,
     &:focus {
-      color: #fafafa;
+      color: $white-Darker;
     }
 
     @media screen and (max-width: 767px) {
       font-size: 32px;
-      color: #fafafa;
+      color: $white-Darker;
     }
   }
 
   &__link--pets {
-    color: #545454;
+    color: $title-grey;
     line-height: 1.3;
+
     &:hover,
     &:focus {
-      color: #292929;
+      color: $dark;
     }
   }
 
   &__link--active {
     position: relative;
-    color: #fafafa;
+    color: $white-Darker;
 
     &::after {
       display: block;
@@ -214,13 +222,14 @@
       bottom: -6px;
       height: 3px;
       width: 100%;
-      background: #f1cdb3;
+      background: $pramary-btn-color;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 
   &__link--pets.nav__link--active {
-    color: #545454;
+    color: $title-grey;
+
     &::after {
       box-shadow: none;
     }

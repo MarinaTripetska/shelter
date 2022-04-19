@@ -31,11 +31,8 @@
 
   &__item {
     width: 100%;
-    // height: 234px;
-
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     justify-content: start;
     align-items: flex-start;
 
@@ -46,6 +43,7 @@
     &--first {
       gap: 40px;
       max-width: 280px;
+
       @media screen and (max-width: 767px) {
         max-width: 278px;
         align-items: center;
@@ -56,11 +54,11 @@
     &--second {
       gap: 32px;
       max-width: 302px;
+
       @media screen and (max-width: 767px) {
         max-width: 300px;
         align-items: center;
         gap: 42px;
-
         align-items: flex-start;
       }
     }
@@ -94,7 +92,7 @@
     line-height: 1.15;
 
     letter-spacing: 0.06em;
-    color: #f1cdb3;
+    color: $pramary-btn-color;
   }
 
   &__icon1 {
@@ -109,8 +107,8 @@
   }
 
   &__img {
-    // position: relative;
     max-width: 300px;
+
     @media screen and (max-width: 767px) {
       max-width: 260px;
     }
