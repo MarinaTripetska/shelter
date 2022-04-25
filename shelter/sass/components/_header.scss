@@ -1,7 +1,14 @@
+body.menu-open {
+  overflow: hidden;
+  // position: fixed;
+  // width: 100%;
+  // height: 100%;
+}
+
 .header {
   &--main {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     padding-top: 60px;
 
     @media screen and (max-width: 1279px) {
@@ -84,23 +91,27 @@
     position: absolute;
     right: -300px;
     top: 0;
-    width: 0;
-    height: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 10;
-    transition: right 1000ms $t-foo, width 1000ms $t-foo, height 1000ms $t-foo,
-      background 1000ms $t-foo;
+    transition: right 1000ms $t-foo, background 1000ms $t-foo;
 
     &.menu-open {
+      // top: 0;
       right: 0;
-      width: 100%;
-      height: 100vh;
-      max-width: 320px;
-      padding: 30px 10px;
+      background: rgba(41, 41, 41, 0.6);
+      transition: right 1000ms $t-foo, background 1000ms $t-foo;
 
-      position: absolute;
-      background: $dark;
-      transition: right 1000ms $t-foo, background 1000ms $t-foo,
-        width 1000ms $t-foo, height 1000ms $t-foo;
+      .mobile-menu__window {
+        // position: absolute;
+        z-index: 11;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        max-width: 320px;
+        padding: 30px 10px;
+        background: $dark;
+      }
 
       .mobile-menu__top {
         display: flex;

@@ -210,9 +210,13 @@ select {
   border: #f1cdb3;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 .header--main {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   padding-top: 60px;
 }
 
@@ -314,22 +318,26 @@ select {
     position: absolute;
     right: -300px;
     top: 0;
-    width: 0;
-    height: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 10;
-    -webkit-transition: right 1000ms ease-in-out, width 1000ms ease-in-out, height 1000ms ease-in-out, background 1000ms ease-in-out;
-    transition: right 1000ms ease-in-out, width 1000ms ease-in-out, height 1000ms ease-in-out, background 1000ms ease-in-out;
+    -webkit-transition: right 1000ms ease-in-out, background 1000ms ease-in-out;
+    transition: right 1000ms ease-in-out, background 1000ms ease-in-out;
   }
   .mobile-menu.menu-open {
+    right: 0;
+    background: rgba(41, 41, 41, 0.6);
+    -webkit-transition: right 1000ms ease-in-out, background 1000ms ease-in-out;
+    transition: right 1000ms ease-in-out, background 1000ms ease-in-out;
+  }
+  .mobile-menu.menu-open .mobile-menu__window {
+    z-index: 11;
     right: 0;
     width: 100%;
     height: 100vh;
     max-width: 320px;
     padding: 30px 10px;
-    position: absolute;
     background: #292929;
-    -webkit-transition: right 1000ms ease-in-out, background 1000ms ease-in-out, width 1000ms ease-in-out, height 1000ms ease-in-out;
-    transition: right 1000ms ease-in-out, background 1000ms ease-in-out, width 1000ms ease-in-out, height 1000ms ease-in-out;
   }
   .mobile-menu.menu-open .mobile-menu__top {
     display: -webkit-box;
