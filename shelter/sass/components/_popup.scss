@@ -22,6 +22,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
+
+  @media screen and (max-width: 1100px) {
+    max-width: 682px;
+    min-height: 402px;
+    transform: translate(-45%, -50%);
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 271px;
+    min-height: 393px;
+  }
 }
 
 .btn-close-modal {
@@ -32,7 +43,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    right: 5px;
+  }
 }
+
 .modal {
   width: 100%;
   max-width: 900px;
@@ -43,11 +59,30 @@
   overflow: hidden;
 
   display: flex;
-  justify-content: space-between;
-  justify-content: center;
+
+  @media screen and (max-width: 1100px) {
+    max-width: 630px;
+    min-height: 350px;
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 240px;
+    min-height: 340px;
+    overflow: inherit;
+  }
 
   &__img {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
+
+    @media screen and (max-width: 1100px) {
+      max-width: 350px;
+      min-height: 350px;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__text-thumb {
@@ -59,11 +94,25 @@
     font-weight: 400;
     letter-spacing: 0.06em;
     color: $veryDark;
+
+    @media screen and (max-width: 1100px) {
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      max-width: 240px;
+    }
   }
 
   &__title {
-    @extend %title;
-    letter-spacing: 0.06em;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 35px;
+    line-height: 1.3;
+
     margin-bottom: 9px;
   }
 
@@ -77,6 +126,18 @@
     font-size: 15px;
     line-height: 1.13;
     margin: 40px 0 42px 0;
+
+    @media screen and (max-width: 1100px) {
+      font-size: 13px;
+      line-height: 1.1;
+
+      margin: 20px 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      text-align: justify;
+      margin: 20px 0 24px 0;
+    }
   }
 
   &__parameters-list {
@@ -84,21 +145,31 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 11px;
+
+    @media screen and (max-width: 1100px) {
+      gap: 5px;
+    }
   }
 
   &__parameters-item {
     font-size: 15px;
     line-height: 1.13;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: flex-end;
     gap: 3px;
+
+    @media screen and (max-width: 1100px) {
+      text-align: left;
+    }
   }
 
   &__span-name {
     display: inline-flex;
     align-items: flex-start;
     gap: 10px;
-    font-weight: 800;
+    font-weight: 700;
 
     &::before {
       align-self: center;

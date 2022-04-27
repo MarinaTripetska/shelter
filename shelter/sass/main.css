@@ -120,7 +120,7 @@ select {
   }
 }
 
-.modal__title, .banner__title, .about__title, .friends__title, .help__title, .addition__title, .friends-pets__title, .footer__title {
+.banner__title, .about__title, .friends__title, .help__title, .addition__title, .friends-pets__title, .footer__title {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -129,7 +129,7 @@ select {
 }
 
 @media (max-width: 767px) {
-  .modal__title, .banner__title, .about__title, .friends__title, .help__title, .addition__title, .friends-pets__title, .footer__title {
+  .banner__title, .about__title, .friends__title, .help__title, .addition__title, .friends-pets__title, .footer__title {
     font-size: 25px;
     line-height: 1.28;
     text-align: center;
@@ -596,6 +596,22 @@ select {
   background-color: transparent;
 }
 
+@media screen and (max-width: 1100px) {
+  .window {
+    max-width: 682px;
+    min-height: 402px;
+    -webkit-transform: translate(-45%, -50%);
+            transform: translate(-45%, -50%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .window {
+    max-width: 271px;
+    min-height: 393px;
+  }
+}
+
 .btn-close-modal {
   margin-left: auto;
   position: relative;
@@ -611,6 +627,12 @@ select {
           align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .btn-close-modal {
+    right: 5px;
+  }
+}
+
 .modal {
   width: 100%;
   max-width: 900px;
@@ -623,16 +645,39 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .modal {
+    max-width: 630px;
+    min-height: 350px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .modal {
+    max-width: 240px;
+    min-height: 340px;
+    overflow: inherit;
+  }
 }
 
 .modal__img {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 1100px) {
+  .modal__img {
+    max-width: 350px;
+    min-height: 350px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .modal__img {
+    display: none;
+  }
 }
 
 .modal__text-thumb {
@@ -646,8 +691,25 @@ select {
   color: #000;
 }
 
+@media screen and (max-width: 1100px) {
+  .modal__text-thumb {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .modal__text-thumb {
+    text-align: center;
+    max-width: 240px;
+  }
+}
+
 .modal__title {
-  letter-spacing: 0.06em;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 1.3;
   margin-bottom: 9px;
 }
 
@@ -661,6 +723,21 @@ select {
   font-size: 15px;
   line-height: 1.13;
   margin: 40px 0 42px 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .modal__description {
+    font-size: 13px;
+    line-height: 1.1;
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .modal__description {
+    text-align: justify;
+    margin: 20px 0 24px 0;
+  }
 }
 
 .modal__parameters-list {
@@ -677,16 +754,33 @@ select {
   gap: 11px;
 }
 
+@media screen and (max-width: 1100px) {
+  .modal__parameters-list {
+    gap: 5px;
+  }
+}
+
 .modal__parameters-item {
   font-size: 15px;
   line-height: 1.13;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 3px;
+}
+
+@media screen and (max-width: 1100px) {
+  .modal__parameters-item {
+    text-align: left;
+  }
 }
 
 .modal__span-name {
@@ -697,7 +791,7 @@ select {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 10px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .modal__span-name::before {
