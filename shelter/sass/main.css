@@ -577,6 +577,7 @@ select {
 .overlay._open {
   display: block;
   position: fixed;
+  z-index: 11;
   width: 100%;
   height: 100%;
   top: 0;

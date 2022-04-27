@@ -10,4 +10,3 @@ export const modalBody = modalOverlay.querySelector(".modal");
 export const closeModalBtn = modalOverlay.querySelector(".btn-close-modal ");
 //
 export const petCards = document.querySelectorAll(".card");
-//
