@@ -1,10 +1,4 @@
-//REFS DOM ELEMENTS
-const body = document.querySelector("body");
-const mobileMenu = document.querySelector(".mobile-menu");
-const burger = document.getElementById("burger");
-const nav = document.getElementById("navigation");
-const navItemsColection = nav.querySelectorAll("a");
-const logo = document.querySelector(".logo");
+import { body, mobileMenu, burger, navItemsColection, logo } from "./refs.js";
 
 //================
 const mql = window.matchMedia("(max-width: 767px)");
@@ -54,5 +48,3 @@ function onOverlayClick(e) {
     toggleBurgerMenu();
   }
 }
-
-console.log("Проверте пожалуйста в четверг");

@@ -22,11 +22,16 @@ ul,
 li {
   margin: 0;
 }
+
 body {
   min-height: 100vh;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 a {
