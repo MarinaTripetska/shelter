@@ -1,0 +1,71 @@
+.friends-pets {
+  background-color: $bg-grey;
+  padding-top: 200px;
+
+  @media screen and (max-width: 1279px) {
+    &.section {
+      padding-bottom: 70px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-top: 162px;
+    &.section {
+      padding-bottom: 42px;
+    }
+  }
+
+  &__title {
+    @extend %title;
+    letter-spacing: 0.06em;
+    color: $title-grey;
+    text-align: center;
+
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 1279px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 30px;
+
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 1279px) {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 970px) {
+      margin-bottom: 40px;
+      max-height: 1365px;
+      overflow-y: hidden;
+    }
+  }
+}
+
+.pagination-thumb {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+
+  @media screen and (max-width: 767px) {
+    gap: 10px;
+  }
+}
